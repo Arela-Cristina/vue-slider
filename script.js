@@ -27,6 +27,24 @@ createApp({
                 }
             ],
         }
+    },
+    methods: {
+        activeItem: 0,
+        nextImage() {
+            console.log('hey'),
+                this.activeItem++;
+            if (activeItem > this.poster.image.length - 1) {
+
+                this.activeItem = 0;
+            }
+        },
+
+        prevImage() {
+            this.activeItem--;
+            if (this.activeItem < 0) {
+                this.activeItem = this.poster.image.length - 1;
+            }
+        }
     }
 }
 ).mount('#app')
