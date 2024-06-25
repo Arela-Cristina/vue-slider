@@ -18,11 +18,11 @@
             <div class="slider-wrapper" tabindex="0">
 
                 <div class="item">
-                    <img :src="poster.image"  v-for="poster in slides" alt="Spiderman">
+                    <img :src="slides[0].image" alt="Spiderman">
                     <div class="text">
-                        <h3 v-for="title in slides">{{title.title}}</h3>
-                        <p v-for="caption in slides">
-                            {{caption.text}}
+                        <h3>{{slides[0].title}}</h3>
+                        <p>
+                            {{slides[0].text}}
                         </p>
                     </div>
                 </div>
@@ -31,7 +31,7 @@
                     <div class="prev" @click="prevImage"></div>
                     <div class="next" @click="nextImage"></div>
                     <div class="thumb active">
-                        <img :src="thumbs.image" v-for="thumbs in slides" alt="Svezia" >
+                        <img :src="thumbs.image" v-for="thumbs in slides" alt="Svezia">
                     </div>
                     <!-- <div class="thumb">
                         <img src="img/02.webp" alt="Ratchet & Clank" />

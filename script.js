@@ -32,18 +32,19 @@ createApp({
     methods: {
 
         nextImage() {
-            console.log('hey'),
-                this.activeItem++;
-            if (this.activeItem > this.poster.image.length - 1) {
+            console.log('hey');
 
+            if (this.activeItem > this.slides[0].image.length - 1) {
+                this.slides[0].image.length.classList.add('.none');
                 this.activeItem = 0;
+                this.activeItem++;
             }
         },
 
         prevImage() {
             this.activeItem--;
             if (this.activeItem < 0) {
-                this.activeItem = this.poster.image.length - 1;
+                this.activeItem = this.slides[0].image.length - 1;
             }
         }
     }

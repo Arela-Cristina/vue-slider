@@ -106,3 +106,8 @@ oppure i caratteri ∧ (&and;) e ∨ (&or;)
     transform: translate(-50%) rotate(135deg);
 }
 
+/*CLASSE NUOVA*/
+
+.none {
+    display: none;
+}
