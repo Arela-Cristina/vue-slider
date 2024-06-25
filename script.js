@@ -34,19 +34,21 @@ createApp({
         nextImage() {
             console.log('hey');
 
-            if (this.activeItem > this.slides[activeItem].image.length - 1) {
-                this.slides[activeItem].image.length.classList.add('.none');
+            if (this.activeItem >= this.slides.length - 1) {
                 this.activeItem = 0;
+            } else {
                 this.activeItem++;
             }
         },
 
         prevImage() {
-            this.activeItem--;
-            if (this.activeItem < 0) {
-                this.activeItem = this.slides[activeItem].image.length - 1;
+
+            if (this.activeItem <= 0) {
+                this.activeItem = this.slides.length - 1;
+            } else {
+                this.activeItem--;
             }
         }
     }
 }
-).mount('#app')
+).mount('#app') 
