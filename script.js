@@ -34,8 +34,8 @@ createApp({
         nextImage() {
             console.log('hey');
 
-            if (this.activeItem > this.slides[0].image.length - 1) {
-                this.slides[0].image.length.classList.add('.none');
+            if (this.activeItem > this.slides[activeItem].image.length - 1) {
+                this.slides[activeItem].image.length.classList.add('.none');
                 this.activeItem = 0;
                 this.activeItem++;
             }
@@ -44,7 +44,7 @@ createApp({
         prevImage() {
             this.activeItem--;
             if (this.activeItem < 0) {
-                this.activeItem = this.slides[0].image.length - 1;
+                this.activeItem = this.slides[activeItem].image.length - 1;
             }
         }
     }
