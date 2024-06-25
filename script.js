@@ -3,6 +3,7 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
+            activeItem: 0,
             slides: [
                 {
                     image: 'img/01.webp',
@@ -29,11 +30,11 @@ createApp({
         }
     },
     methods: {
-        activeItem: 0,
+
         nextImage() {
             console.log('hey'),
                 this.activeItem++;
-            if (activeItem > this.poster.image.length - 1) {
+            if (this.activeItem > this.poster.image.length - 1) {
 
                 this.activeItem = 0;
             }
